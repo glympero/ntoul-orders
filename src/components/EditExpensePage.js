@@ -21,7 +21,7 @@ export class EditExpensePage extends React.Component {
       <div>
         <div className='page-header'>
           <div className='content-container'>
-            <h1 className='page-header__title'>Edit Expense</h1>
+            <h1 className='page-header__title'>Τροποίηση Παραγγελίας</h1>
           </div>
         </div>
         <div className='content-container'>

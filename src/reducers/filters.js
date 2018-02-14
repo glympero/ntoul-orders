@@ -20,6 +20,11 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
                 ...state,
                 sortBy: 'date'
             };
+        case 'SORT_BY_DESCRIPTION':
+        return {
+            ...state,
+            sortBy: 'description'
+        };
         case 'SORT_BY_AMOUNT':
             return {
                 ...state,

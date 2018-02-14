@@ -81,9 +81,9 @@ class ExpenseForm extends React.Component {
         return (
             <form className='form' onSubmit={this.onSubmit}>
                 { !!this.state.error && <p className='form__error'>{this.state.error}</p>}
-                <input className='text-input' type='text' value={this.state.description} onChange={this.onDescriptionChange} placeholder='Description' autoFocus/>
-                <input className='text-input' type='text' value={this.state.amount} onChange={this.onAmountChange} placeholder='amount' />
-                <textarea className='text-area'value={this.state.note} onChange={this.onNoteChange} placeholder='Add a note for your expense (optional)'>
+                <input className='text-input' type='text' value={this.state.description} onChange={this.onDescriptionChange} placeholder='Προϊόν' autoFocus/>
+                <input className='text-input' type='text' value={this.state.amount} onChange={this.onAmountChange} placeholder='Ποσότητα' />
+                <textarea className='text-area'value={this.state.note} onChange={this.onNoteChange} placeholder='Παρατηρήσεις (optional)'>
                 </textarea>
                 <SingleDatePicker
                     date={this.state.createdAt} 

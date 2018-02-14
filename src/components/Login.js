@@ -6,7 +6,7 @@ export const Login = (props) => (
     <div className='box-layout'>
     <div className='box-layout__box'>
         <h1 className='box-layout__title'>Παραγγελίες</h1>
-        <p>It's time to get your expenses uder control</p>
+        <p>...</p>
         <button onClick={props.startLogin} className='button'>Login with Google</button>
     </div>
     </div>

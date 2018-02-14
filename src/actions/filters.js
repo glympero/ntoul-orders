@@ -10,6 +10,11 @@ const sortByDate = () => ({
     type: 'SORT_BY_DATE'
 });
 
+// SORT_BY_DESCRIPTION
+const sortByDescription = () => ({
+    type: 'SORT_BY_DESCRIPTION'
+});
+
 // SORT_BY_AMOUNT
 const sortByAmount = () => ({
     type: 'SORT_BY_AMOUNT'
@@ -28,4 +33,4 @@ const setEndDate = (endDate = undefined) => ({
     endDate
 });
 
-export { setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate};
+export { setTextFilter, sortByDate, sortByAmount, sortByDescription, setStartDate, setEndDate};

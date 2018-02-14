@@ -21,6 +21,8 @@ const getVisibleExpenses = (expenses, filters) => {
             return a.createdAt < b.createdAt ? 1 : -1;
         }else if (sortBy === 'amount') {
             return b.amount - a.amount;
+        }else if (sortBy === 'description') {
+            return a.description > b.description ? 1 : -1;
         }
     });
 };

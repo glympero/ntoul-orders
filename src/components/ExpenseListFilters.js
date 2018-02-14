@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate } from '../actions/filters';
+import { setTextFilter, sortByDate, sortByAmount, sortByDescription, setStartDate, setEndDate } from '../actions/filters';
 import { DateRangePicker } from 'react-dates';
 
 class ExpenseListFilters extends React.Component {
@@ -27,7 +27,7 @@ class ExpenseListFilters extends React.Component {
                         <input 
                             type='text'
                             className='text-input'
-                            placeholder='Search expenses'
+                            placeholder='Αναζήτηση προϊόντος'
                             value={this.props.filters.text} 
                             onChange={(event) => {
                                 this.props.dispatch(setTextFilter(event.target.value));
@@ -44,10 +44,13 @@ class ExpenseListFilters extends React.Component {
                                     this.props.dispatch(sortByDate());
                                 }else if(filter === 'amount') {
                                     this.props.dispatch(sortByAmount());
+                                }else if(filter === 'description') {
+                                    this.props.dispatch(sortByDescription());
                                 }
                             }}>
-                            <option value='date'>Date</option>
-                            <option value='amount'>Amount</option>
+                            <option value='date'>Ημερομηνία</option>
+                            <option value='description'>Προϊόν</option>
+                            <option value='amount'>Ποσότητα</option>
                         </select>
                     </div>
                     <div className='input-group__item'>  
@@ -63,9 +66,6 @@ class ExpenseListFilters extends React.Component {
                     />
                     </div>
                 </div>
-                
-                
-                
             </div>
         )
     }

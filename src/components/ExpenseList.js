@@ -9,15 +9,15 @@ export const ExpenseList = (props) => {
     return (
         <div className='content-container'>
         <div className='list-header'>
-            <div className='show-for-mobile'>Expenses</div>
-            <div className='show-for-desktop'>Expense</div>
-            <div className='show-for-desktop'>Amount</div>
+            <div className='show-for-mobile'>Προϊόντα</div>
+            <div className='show-for-desktop'>Προϊόν</div>
+            <div className='show-for-desktop'>Ποσότητα</div>
         </div>
         <div className='list-body'>
             {
                 props.expenses.length === 0 ? (
                     <div>
-                        <span className='list-item list-item--message'>No expenses Found</span>
+                        <span className='list-item list-item--message'>Δεν υπάρχει προϊον για παραγγελία</span>
                     </div>
                     
                 ) : (
